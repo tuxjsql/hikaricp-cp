@@ -1,4 +1,4 @@
-#HikariCP-CP the HikariCP connection provider
+# HikariCP-CP the HikariCP connection provider
 
 # Big Notes: 
 HikariCP has been marked as "provided" in the pom so it wont have that in its path.
