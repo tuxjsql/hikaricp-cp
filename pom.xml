@@ -14,9 +14,9 @@
         </license>
     </licenses>
     <url>https://github.com/tuxjsql/hikaricp-cp</url>
-    <description>A JBDC wrapper, sql builder, and sql executor</description>
+    <description>The HikariCP connection provider for TuxJSQL</description>
     <scm>
-        <url>https://github.com/wherkamp/tuxjsql</url>
+        <url>https://github.com/tuxjsql/hikaricp-cp</url>
     </scm>
     <developers>
         <developer>
