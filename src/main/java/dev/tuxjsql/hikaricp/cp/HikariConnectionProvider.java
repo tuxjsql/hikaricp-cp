@@ -59,10 +59,10 @@ public class HikariConnectionProvider implements ConnectionProvider {
         config.setJdbcUrl(settings.getUrl());
         config.setUsername(userSettings.getProperty("user", ""));
         config.setPassword(userSettings.getProperty("password", ""));
-        config.setIdleTimeout(Long.parseLong(userSettings.getProperty("idle-timeout", "30000")));
-        config.setLeakDetectionThreshold(Long.parseLong(userSettings.getProperty("leak-detection", "30000")));
-        config.setMaximumPoolSize(Integer.parseInt(userSettings.getProperty("pool-size", "5")));
-        config.setPoolName(userSettings.getProperty(userSettings.getProperty("pool-name", "TuxJSQL")));
+        config.setIdleTimeout(Long.parseLong(userSettings.getProperty("idle.timeout", "30000")));
+        config.setLeakDetectionThreshold(Long.parseLong(userSettings.getProperty("leak.detection", "30000")));
+        config.setMaximumPoolSize(Integer.parseInt(userSettings.getProperty("pool.size", "5")));
+        config.setPoolName(userSettings.getProperty(userSettings.getProperty("pool.name", "TuxJSQL")));
         dataSource = new HikariDataSource(config);
     }
 }
