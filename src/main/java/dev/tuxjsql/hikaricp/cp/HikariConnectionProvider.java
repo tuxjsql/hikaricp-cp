@@ -53,7 +53,7 @@ public class HikariConnectionProvider implements ConnectionProvider {
     }
 
     @Override
-    public void setup(ConnectionSettings settings, Properties userSettings) {
+    public void setup(ConnectionSettings settings, Properties userSettings) throws Exception {
         HikariConfig config = new HikariConfig();
         config.setDriverClassName(settings.getDriver());
         config.setJdbcUrl(settings.getUrl());
@@ -64,5 +64,11 @@ public class HikariConnectionProvider implements ConnectionProvider {
         config.setMaximumPoolSize(Integer.parseInt(userSettings.getProperty("pool.size", "5")));
         config.setPoolName(userSettings.getProperty(userSettings.getProperty("pool.name", "TuxJSQL")));
         dataSource = new HikariDataSource(config);
+
+    }
+
+    @Override
+    public boolean isClosed() {
+        return dataSource.isClosed();
     }
 }
